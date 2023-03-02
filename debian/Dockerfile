@@ -6,9 +6,13 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV USER_UID 1000
 ENV USER_NAME itmig
 ENV USER_HOME /home/itmig
+ENV USER2_UID 1001
+ENV USER2_NAME it
+ENV USER2_HOME /home/it
 
 RUN apt-get update && \
     useradd -ms /bin/bash -u $USER_UID $USER_NAME && \
+    useradd -ms /bin/bash -u $USER2_UID $USER2_NAME && \
     apt-get install -y --no-install-recommends --no-install-suggests apt-transport-https wget curl ca-certificates
 
 COPY sources.list /etc/apt/

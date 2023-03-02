@@ -1,5 +1,5 @@
 FROM node:16.13-slim as node
-FROM mig:debian11
+FROM mig:debian11.1
 
 MAINTAINER itmig@molindointigas.co.id
 
