@@ -41,7 +41,7 @@ RUN ln -s /usr/local/lib/node_modules/npm/bin/npm-cli.js /usr/local/bin/npm
 # install cron & supervisor
 RUN apt-get install --no-install-recommends --no-install-suggests -y supervisor cron
 ADD ./supervisor/supervisord.conf /etc/supervisor/
-ADD ./supervisor/services /etc/supervisor/conf.d/
+# ADD ./supervisor/services /etc/supervisor/conf.d/
 
 # clear apt cache
 RUN apt-get clean -y && apt-get autoclean -y && apt-get autoremove -y && \
